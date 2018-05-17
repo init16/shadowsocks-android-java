@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
 
     <application
         android:allowBackup="true"
@@ -21,6 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.vm.shadowsocks.ui.AppManager"
+            android:label="@string/proxied_apps"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"/>
 
         <service
             android:name="com.vm.shadowsocks.core.LocalVpnService"
